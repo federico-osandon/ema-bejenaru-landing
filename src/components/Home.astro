@@ -1,8 +1,12 @@
 ---
 import logo from '../assets/logoEma.jpg'
 import imagenEma from '../assets/ema-bejenaru.webp'
+import imagenEmaJpg from '../assets/ema-bejenaru.jpg'
 import maquillaje from '../assets/maquillaje.png'
 import pestanias from '../assets/pestanias.webp'
+
+import Section from './Section.astro'
+import { imageConfig } from 'astro:assets'
 ---
 
 <div class="">
@@ -12,7 +16,7 @@ import pestanias from '../assets/pestanias.webp'
 		<section class="relative flex flex-col gap-10 items-start justify-start w-full  overflow-hidden">
 			<header class="w-full">
 				<div class="w-full h-[40px] bg-[#E7B2A4] flex items-center justify-between px-[5%]">
-					<div>Contactame</div>
+					<div>Contaactar con Emma</div>
 					<div>
 						<span>(*34)666666</span>
 						<span>@miinstagram</span>
@@ -35,7 +39,7 @@ import pestanias from '../assets/pestanias.webp'
 			<div class="flex items-start justify-start w-full h-full z-10 px-[5%] mb-24">
 				<div class="flex flex-col items-start justify-start gap-10 w-1/2 mt-[5%]">
 					<div class="flex flex-col items-start justify-start gap-3 w-full  text-white">
-						<span class="text-8xl font-semibold">About Ema</span>
+						<span class="text-8xl font-semibold">Soy Ema</span>
 						<span class="text-7xl font-semibold uppercase text-[#E7B2A4]">Bejenaru</span>
 						<h1 class="text-5xl font-semibold">Ema Bejenaru</h1>
 						<p class="text-4xl">Empresaria de la Belleza</p>
@@ -85,7 +89,7 @@ import pestanias from '../assets/pestanias.webp'
 		</section>
 		<section class="relative flex flex-col gap-10 items-start justify-start w-full">
 			<div class="flex flex-col items-start justify-start w-full h-full px-[5%]">
-				<h2 class="text-5xl font-semibold uppercase -mt-8">Sobre Ema</h2>
+				<h2 class="text-5xl font-semibold uppercase -mt-8">Nuestros Servicios</h2>
 				<img src={maquillaje.src} alt="maquillaje" class="absolute top-0 right-[5%] w-[250px] object-contain -mt-24" />
 				<div class="flex items-start justify-around gap-4 w-full h-full mt-14 mb-14">	
 					<div class="flex flex-col items-start justify-center gap-10 w-[20%]">
@@ -120,10 +124,105 @@ import pestanias from '../assets/pestanias.webp'
 				</div>
 			</div>
 		</section>
-			
-	</main>
+		<Section>
+			<div class="flex items-start justify-start w-full px-[5%] py-[10%]">
+				<div class="flex flex-col justify-start items-center w-1/2">
+					<!-- <img src={imageConfig.src} alt="imagen Ema Bejenaru" /> -->
+					<img src={imagenEmaJpg.src} alt="imagen Ema Bejenaru" class="w-[80%] object-contain rounded-xl" />
+				</div>
+				<div class="flex flex-col justify-start items-start gap-8 w-1/2">
+					<h2 class="text-5xl font-semibold uppercase">
+						Hola soy Ema Bejenaru
+					</h2>
+					<p class="object-contain">
+						Ema Bejenaru es una reconocida especialista en estética de la mirada con más de 12 años de experiencia en el sector de la belleza. Es fundadora del Salón Ema Bejenaru, ubicado en Travessera de les Corts, 190, Barcelona, donde se ofrecen servicios especializados en extensiones de pestañas, cejas y depilación facial con hilo.
+						
+					</p>
+					<p>
+						Además de dirigir su salón, Ema es formadora y mentora en su academia, Ema Bejenaru Academy, donde imparte cursos de extensiones de pestañas, lifting y tratamientos de cejas. Su academia también comercializa productos profesionales para estos tratamientos. 
 
-	
+					</p>
+					<p>
+
+						Ema combina sus pasiones como entrenadora especialista en la mirada, terapeuta y mentora, ofreciendo entrenamientos a otros profesionales del sector y participando en eventos y conferencias relacionados con la belleza y el emprendimiento. 
+					</p>
+					<p>
+
+						Su salón ha recibido valoraciones muy positivas por parte de los clientes, destacando la profesionalidad y calidad de los servicios ofrecidos. 
+					</p>
+					<p>
+						Para más información sobre sus servicios y formaciones, puedes visitar su página web oficial.
+
+					</p>
+
+					<a>
+						Contacta con Ema
+					</a>
+				</div>
+
+			</div>
+		</Section>
+		<Section>
+			<div class="flex flex-col items-start justify-start w-full px-[5%]">
+				<span>
+					hace despegar tu negocio con estos:
+				</span>
+				<h2 class="text-5xl font-semibold uppercase">
+					cursos y mentorías
+				</h2>
+				<div class="flex items-start justify-around gap-4 w-full h-full mt-14 mb-14">	
+					<div class="flex flex-col items-start justify-center gap-10 w-[25%]">
+						<img src={pestanias.src} alt="pestanias" class="w-full object-contain rounded-xl" />
+						<div class="text-center text-balance">
+							<h3 class="text-5xl font-semibold">Metamorfosis</h3>
+							<p>Datos sobre Ema</p>
+						</div>
+					</div>
+					<div class="flex flex-col items-center justify-center gap-10 w-[25%]">
+						<img src={pestanias.src} alt="pestanias" class="w-full object-contain rounded-xl" />
+						<div class="text-center text-balance">
+							<h3 class="text-5xl font-semibold">Negocios de Éxito</h3>
+							<p>Datos sobre Ema</p>
+						</div>
+					</div>
+					<div class="flex flex-col items-center justify-center gap-10 w-[25%]">
+						<img src={pestanias.src} alt="pestanias" class="w-full object-contain rounded-xl" />
+						<div class="text-center text-balance">
+							<h3 class="text-5xl font-semibold">Especializados en la mirada</h3>
+							<p>Datos sobre Ema</p>
+						</div>
+					</div>
+					
+
+				</div>
+			</div>
+		</Section>
+		<Section>
+			<div class="flex flex-col items-start justify-start w-full px-[5%] bg-slate-100">
+				<h2>
+					Productos para la mejora de la mirada
+				</h2>
+			</div>
+		</Section>
+		<Section>
+			<div class="flex flex-col items-start justify-start w-full px-[5%]">
+				<h2>
+					Tambien estoy en youtube
+				</h2>
+			</div>
+		</Section>
+		<Section>
+			<div class="flex flex-col items-start justify-start w-full px-[5%] bg-slate-100">
+				<h2>
+					Contactame para más información
+				</h2>
+			</div>
+		</Section>
+		  
+	</main>
+	<footer>
+		footer
+	</footer>
 </div>
 
 <style>
